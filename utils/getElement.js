@@ -5,3 +5,5 @@ function getElement(selection) {
   }
   throw new Error(`There was an error the '${selection}' does not exist`);
 }
+
+export default getElement;
