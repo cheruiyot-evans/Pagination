@@ -8,8 +8,9 @@ const title = getElement('.section-title>h1');
 
 const innit = async () => {
   const followers = await fetchFollowers();
-  displayFollowers(followers);
+  displayFollowers(paginate(followers)[0]);
   title.textContent = 'pagination';
+  const pages = paginate(followers);
 };
 
 window.addEventListener('load', innit);
